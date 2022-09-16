@@ -150,5 +150,26 @@ switch (flag)
         Console.WriteLine(somma);
         break;
     case 9:
+        Console.WriteLine("Snack - 9");
 
+        int sommaMax = 0;
+        string numbersArray = "";
+        do
+        {
+            Console.Write("Inserisci un numero: ");
+            string? numero = Console.ReadLine();
+            numbersArray += numero + ",";
+            sommaMax += Convert.ToInt32(numero);
+
+        } while (sommaMax < 50);
+
+        string[] onlyNumArray = numbersArray.Split(",");
+
+        int[] arrayNum = new int[onlyNumArray.Length-1];
+        
+        for (int i = 0; i < onlyNumArray.Length-1; i++)
+        {
+            arrayNum[i] = Convert.ToInt32(onlyNumArray[i]);
+        }
+        break;
 }
