@@ -14,18 +14,18 @@ switch (flag)
         for (int i = 0; i < 2; i++)
         {
             Console.Write("Inserisci un numero: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            int numb = Convert.ToInt32(Console.ReadLine());
             
             if (i == 0)
             {
-                maximum = num;
+                maximum = numb;
                 continue;
             }
             else
             {
-                if (num > maximum)
+                if (numb > maximum)
                 {
-                    maximum = num;
+                    maximum = numb;
                 }
             }
         }
@@ -54,5 +54,101 @@ switch (flag)
 
         break;
     case 3:
+        Console.WriteLine("Snack - 3");
+
+        int sum = 0;
+        for (int i = 0; i < 10; i++)
+        {
+            Console.Write("Inserisci un numero: ");
+            int numbs = Convert.ToInt32(Console.ReadLine());
+            sum += numbs;   
+        }
+
+        Console.WriteLine($"La somma è {sum}");
         break;
+    case 4:
+        Console.WriteLine("Snack - 4");
+        
+        int sums = 0;
+        int average = 0;
+
+        for (int i = 2; i <= 10; i++)
+        {
+            sums += i;
+        }
+
+        average = sums / 8;
+
+        Console.WriteLine($"Sum: {sums}, average: {average}");
+
+        break;
+    case 5:
+        Console.WriteLine("Snack - 5");
+
+        Console.Write("Inserisci un numero: ");
+        int? num = Convert.ToInt32(Console.ReadLine());
+        if (num % 2 == 0)
+        {
+            Console.WriteLine(num);
+        }
+        else
+        {
+            Console.WriteLine(num+1);
+        }
+        break;
+    case 6:
+        Console.WriteLine("Snack - 6");
+
+        string[] inviteList = new[] { "Gianni", "Alan", "Paolo", "Giorgio" };
+        Console.Write("Inserisci un nome: ");
+        string? name = Console.ReadLine();
+
+        if (inviteList.Contains(name))
+        {
+            Console.WriteLine("Puoi partecipare");
+        }
+        else
+        {
+            Console.WriteLine("Non puoi partecipare");
+        }
+        break;
+    case 7:
+        Console.WriteLine("Snack - 7");
+
+        int[] array = new int[6];
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write("Inserisci un numero: ");
+            int numero = Convert.ToInt32(Console.ReadLine());
+            if (numero % 2 != 0)
+            {
+                array[i] = numero;
+            }
+        }
+        Console.WriteLine("Array risultante:");
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i] + " ");
+        }
+
+        break;
+    case 8:
+        Console.WriteLine("Snack - 8");
+
+        int[] numArray = new[] { 1, 4, 6, 8, 3, 7, 0, 2, 1, 23 };
+        int somma = 0;
+
+        for (int i = 0; i < numArray.Length; i++)
+        {
+            if (i % 2 == 0)
+            {
+                somma += numArray[i];
+            }
+        }
+
+        Console.WriteLine(somma);
+        break;
+    case 9:
+
 }
